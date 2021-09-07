@@ -1,0 +1,267 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.Testimonials{
+    height: 100vh;
+    width: 100%;
+    background-color: $light-color;
+ /*    padding: 3rem 5rem; */
+
+    & .testimonialBox{
+        @include centered(column, center);
+        transform: translateY(3rem);
+       
+        .title{
+            font-size: 2rem;
+            font-weight: 900;
+            color: #484848;
+            text-align: center;
+            text-transform: uppercase;
+    
+            &::before{
+                content: "";
+                display: block;
+                width: 15%;
+                height: 3.5px;
+                border-radius: 3px;
+                background-color:  $primary-color;
+                margin: 0 auto;
+                margin-bottom: 1rem;
+                
+            }
+        }
+
+        .text{
+            color: rgb(189, 189, 189);
+            font-size: 1.3rem;
+            margin-top: 1rem;
+        }
+    }
+
+    
+
+    .carouselContainer{
+        position: relative;
+        @include centered(column, center);
+        padding: 2rem;
+
+        @include md{
+            padding: 0;
+        }
+
+        .dots{
+            @include centered(initial, space-between);
+            width: 60px;
+
+            @include md{
+                margin-top: 1rem;
+            }
+            .dot{
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background-color: $primary-color;
+                border: none;
+    
+            }
+        }
+
+       
+
+        .button{
+            width: 40px;
+            height: 40px;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            outline: none;
+            padding: .2rem;
+            background-color:  $primary-color;
+            color: $light-color;
+        }
+
+        .backButton{
+            position: absolute;
+            top: 50%;
+            left: 10%;
+
+            @include md{
+                top: 40%;
+                left: 5%
+            }
+        }
+
+        .nextButton{
+            position: absolute;
+            top: 50%;
+            right: 10%;
+
+            @include md{
+                top: 40%;
+                right: 5%
+            }
+        }
+
+        .containerSlider{
+            height: 500px;
+            width: 100%;
+
+            @include md{
+                height: 80vh;
+            }
+
+            .slideContent{
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                width: 900px;
+                padding: 3rem 0;
+                margin: 0 auto;
+                transform: translateY(5rem);
+
+                @include md{
+                    flex-direction: column;
+                    width: auto;
+                    height: 100%;
+                   
+                }
+
+                & .description{
+                    @include md{
+                        padding: 0 1rem;
+                    }
+                    .theQuote{
+                        quotes: "“" "”";
+                        width:500px;
+                        color: rgb(187, 187, 187);
+                        font-weight: 500;
+                        font-size: 1.2rem;
+                        letter-spacing: 0.1rem;
+                        line-height: 1.2;
+                        font-style: italic;
+                        justify-self: end;
+                        margin-bottom: 1.5rem;
+                        position: relative;
+                        z-index: 5;
+
+                        @include md{
+                            font-size: .9rem;
+                            width: 100%;
+                            margin: 1rem 0 0 0 ;
+                        }
+                    }
+
+                    .theQuote::before {
+                          content: open-quote;
+                          font-size: 9rem;
+                          position: absolute;
+                          top: -3rem;
+                          left: -3rem;
+                          z-index: -1;
+                          color: rgb(238, 238, 238);
+                          @include md{
+                            font-size: 2rem;
+                            width: 100%;
+                        }
+                      }
+                      .theQuote::after {
+                          content: close-quote;
+                          font-size: 6rem;
+                          position: absolute;
+                          bottom: -5rem;
+                          right: 6rem;
+                          color: rgb(238, 238, 238);
+                          @include md{
+                            font-size: 2rem;
+                            width: 100%;
+                        }
+                      }
+
+                    .names{
+                        @include centered(column, center);
+                        transform: translate(-13rem, 1rem);
+                        width: 400px;
+                        z-index: 100;
+                        position: relative;
+
+                        @include md{
+                            transform: translate(0, 0);
+                            width: auto;
+                            margin-top: 1.5rem;
+                        }
+
+                        h2{
+                            color:  $primary-color;                          
+                            font-size: 2.2rem;                          
+                            align-self: flex-end;
+
+                            @include md{
+                                font-size: 1.5rem;
+                                align-self: center
+                            }
+                        }
+
+                        .curso{
+                            align-self: flex-end;
+                            text-align: end;
+                            font-size: .85rem;
+                            font-style: normal;
+                            letter-spacing: normal;
+
+                            @include md{
+                                align-self: center
+                            }
+                        }
+                    }
+
+                }
+
+                & .boxImage{
+                    height: 200px;
+                    width: 200px;
+                    position: relative;
+                    border: 5px solid $primary-color;
+                    border-radius: 50%;
+                    z-index: 15;
+
+                    &::before{
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        top: -15px;
+                        left: -30px;
+                        width: 190px;
+                        height: 190px;
+                        border-radius: 50%;
+                        background-color:  $primary-color;
+                        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                    
+                    }
+
+                    & .circle{
+                        position: absolute;
+                        bottom: -25px;
+                        right: -10px;
+                        width: 90px;
+                        height: 90px;
+                        border-radius: 50%;
+                        background-color: rgb(247, 247, 247);
+                        z-index: -1000;
+                        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                    }
+                   
+                    & .img{
+                        object-fit: cover;
+                        height: 100%;
+                        border-radius: 50%;
+                        width: 100%;
+                    }
+                }
+            }
+ 
+        }
+    }
+
+    
+}
+

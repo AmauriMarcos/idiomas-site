@@ -1,0 +1,20 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.Footer{
+    height: 100px;
+    width: 100%;
+    background-color: $primary-color;
+    @include centered(initial, center);
+    color: $light-color;
+    font-size: .9rem;
+    letter-spacing: .1rem;
+    font-weight: 500;
+
+    @include md{
+        height: 70px;
+        font-size: .85rem;
+        font-weight: 300;
+    }
+
+}

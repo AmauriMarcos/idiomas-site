@@ -1,0 +1,25 @@
+@import '../../styles/mixins';
+.Features{
+    height: 100%;
+    padding: 3rem 5rem;
+    width: 100%;
+/*     background-color: rgb(233, 233, 233); */
+    @include md{
+        padding: 2rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+        font-weight: 900;
+        color: #484848;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 2rem 0;
+    }
+
+    &__wrapper{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 1rem;
+    }
+}

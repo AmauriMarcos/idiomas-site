@@ -1,0 +1,100 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+
+.Hero{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+
+    &__insufilm{
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        object-fit: cover;  
+        background-color: rgba(0,0,0,.3);
+        z-index: 3;
+    }
+
+    &__video{
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        object-fit: cover;  
+        z-index: 1;  
+    }
+
+    &__content{
+        padding: 0 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        position: relative;
+        height: 100%;
+        z-index: 5;
+        width:  60%;
+        transform: translateY(3rem);
+
+        @include md{
+            transform: translateY(0);
+            align-items: center;
+            width: 100%;
+            padding: 0 3rem;
+            
+        }
+        
+        h1{
+            font-size: 4.5rem;
+            font-weight: 900;      
+            background-image: linear-gradient(45deg, #f5f7fa   ,  #b8c6db);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent; 
+            -moz-text-fill-color: transparent;
+
+            @include md{
+                font-size: 2.8rem;
+                text-align: center;
+            }
+        }
+
+        p{
+            font-weight: 100;
+            text-transform: uppercase;
+            letter-spacing: .5rem;
+            color: $light-color;
+            margin-bottom: 1rem;
+
+            @include md{
+                text-align: center;
+            }
+        }
+
+        button{
+            padding: 1rem .9rem;
+            width: 160px;
+            color: $light-color;
+            outline: none;
+            cursor: pointer;
+            background-color: rgb(238, 147, 147);
+            border-radius: 5px;
+            border: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            font-size: 1.06rem;
+            text-transform: uppercase;
+
+            @include md{
+                width: 130px;
+                padding: .7rem .7rem;
+                font-size: .85rem;
+            }
+        }
+    }
+
+}
