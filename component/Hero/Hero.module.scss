@@ -7,6 +7,10 @@
     width: 100%;
     position: relative;
 
+   /*  @include md{
+        height: auto;
+    } */
+
     &__insufilm{
         width: 100%;
         position: absolute;
@@ -16,6 +20,10 @@
         object-fit: cover;  
         background-color: rgba(0,0,0,.3);
         z-index: 3;
+
+        /* @include md{
+            height: auto;
+        } */
     }
 
     &__video{
@@ -26,6 +34,10 @@
         height: 100%;
         object-fit: cover;  
         z-index: 1;  
+
+       /*  @include md{
+            height: auto;
+        } */
     }
 
     &__content{

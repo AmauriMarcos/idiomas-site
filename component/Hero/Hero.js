@@ -4,13 +4,14 @@ import Navbar from "../Navbar/Navbar";
 import { useMediaQuery } from 'react-responsive';
 import MobileNavbar from "../MobileNavbar/MobileNavbar";
 
-
 const Hero = () => {
-  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' });
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
+  const isMobile = useMediaQuery({ maxWidth: 767 })
 
   return (
     <div className={styles.Hero}>
-      {isTabletOrMobile ? <MobileNavbar/> : <Navbar/>}
+     {isTabletOrMobile && <MobileNavbar/>}
+     {!isTabletOrMobile && <Navbar/>}
       <video className={styles.Hero__video} autoPlay loop muted>
         <source src="/assets/heroWorldMapVideo.mp4" type="video/mp4" />
       </video>

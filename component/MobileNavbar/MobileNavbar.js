@@ -17,14 +17,16 @@ const MobileNavbar = () => {
     return (
         <>
         <div className={styles.MobileNavbar}>
-            <Image src={mobileLogo}/>
-
+            <div>
+                 <Image src={mobileLogo}/>
+            </div>
+            
             <div className={styles.button}>
                 <Hamburger  rounded  toggled={isOpen} toggle={setOpen} />
             </div>
 
         </div>
-
+        
         <Menu  id={ "sidebar" } className={styles.myMenu} onClose={ handleOnClose } isOpen={isOpen}>
             <div className={styles.boxMenu}>
                 <a id="home" className="menu-item" href="/">Home</a>
