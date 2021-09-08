@@ -7,9 +7,9 @@
     width: 100%;
     position: relative;
 
-   /*  @include md{
-        height: auto;
-    } */
+    @include md{
+        height: 100vh;
+    }
 
     &__insufilm{
         width: 100%;

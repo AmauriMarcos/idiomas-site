@@ -10,8 +10,8 @@ const Hero = () => {
 
   return (
     <div className={styles.Hero}>
-     {isTabletOrMobile && <MobileNavbar/>}
-     {!isTabletOrMobile && <Navbar/>}
+   {/*   {isTabletOrMobile ? <MobileNavbar/> : <Navbar/>} */}
+
       <video className={styles.Hero__video} autoPlay loop muted>
         <source src="/assets/heroWorldMapVideo.mp4" type="video/mp4" />
       </video>

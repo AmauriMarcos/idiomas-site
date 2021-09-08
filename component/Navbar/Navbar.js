@@ -5,12 +5,13 @@ import logo from '../../public/assets/logo.png';
 import skypeIcon from '../../public/assets/big-skype-logo.svg';
 import phoneIcon from '../../public/assets/phone-call.svg';
 import Scroll from "react-scroll";
+import { useMediaQuery } from 'react-responsive';
 
 const ScrollLink = Scroll.Link;
 
 function Navbar() {
     const [navbar, setNavbar] = useState(false);
-
+    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
     const changeBackground = () =>{
         if(window.scrollY >= 104){
             setNavbar(true);
@@ -31,7 +32,7 @@ function Navbar() {
 
  
     return (
-        <div className={`${styles.Navbar} ${navbar? styles.active : null}`}>
+         <div className={`${styles.Navbar} ${navbar? styles.active : null}`}>
             <div className={styles.Navbar__logo}>
                 <Image src={logo} alt="logo hicham idiomas"/>
             </div>
@@ -114,6 +115,7 @@ function Navbar() {
                 </div>
             </div>
         </div>
+
     )
 }
 
